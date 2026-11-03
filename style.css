@@ -1,0 +1,44 @@
+:root {
+  --navy: #102b46; --blue: #2463eb; --pale: #edf4ff; --ink: #1b2d42;
+  --muted: #64748b; --line: #e3eaf2; --bg: #f6f9fd;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--bg); }
+.topbar { height: 72px; background: #fff; border-bottom: 1px solid var(--line); display:flex; align-items:center; justify-content:space-between; padding: 0 max(6vw, 22px); }
+.brand { font-weight: 800; letter-spacing: -.4px; color: var(--navy); display:flex; align-items:center; gap:10px; }
+.brand-mark { width:30px;height:30px;border-radius:9px;background:var(--blue);color:white;display:grid;place-items:center;font-size:23px; }
+.brand small { font-size:9px; letter-spacing:1px; color:var(--blue); background:var(--pale); padding:5px 7px; border-radius:5px; margin-left:5px; }
+.top-note { color:var(--muted);font-size:13px; }
+.container { width:min(1000px, 90%); margin:52px auto 30px; }
+.hero { max-width:760px; margin:0 auto 30px; text-align:center; }
+.eyebrow { color:var(--blue); font-size:10px; font-weight:800; letter-spacing:1.7px; }
+h1 { color:var(--navy); font-size:clamp(32px, 5vw, 49px); line-height:1.12; letter-spacing:-1.8px; margin:14px 0; }
+h1 span { color:var(--blue); }
+.hero p { color:var(--muted); line-height:1.7; font-size:15px; max-width:650px; margin:0 auto 18px; }
+.notice { text-align:left; border:1px solid #f1d89b; background:#fff9e9; color:#75551a; padding:13px 16px; border-radius:10px; font-size:12px; line-height:1.6; }
+.panel { background:#fff; border:1px solid var(--line); border-radius:17px; padding:27px; box-shadow:0 12px 35px rgba(25,55,90,.05); }
+.panel-heading { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+h2 { margin:5px 0 0; color:var(--navy); font-size:22px; }
+.count { font-size:12px; color:var(--blue); background:var(--pale); padding:8px 11px; border-radius:20px; white-space:nowrap; }
+.search-wrap { margin:22px 0 16px; border:1px solid var(--line); border-radius:9px; display:flex; align-items:center; gap:9px; padding:0 13px; color:var(--muted); }
+.search-wrap input { width:100%; border:0; outline:0; padding:13px 0; font-size:14px; color:var(--ink); }
+.symptom-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:9px; max-height:410px; overflow:auto; padding:2px 3px 3px 2px; }
+.symptom { display:flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:8px; padding:10px; font-size:12px; color:#40536a; cursor:pointer; min-height:43px; overflow-wrap:anywhere; }
+.symptom:hover { border-color:#9bb8ff; background:#f8faff; }
+.symptom:has(input:checked) { border-color:var(--blue); background:var(--pale); color:#1747a6; }
+.symptom input { accent-color:var(--blue); }
+.actions { display:flex; justify-content:flex-end; gap:10px; margin-top:22px; }
+.button { border:0; border-radius:8px; padding:12px 18px; font-weight:700; cursor:pointer; font-size:13px; }
+.button:disabled { opacity:.45; cursor:not-allowed; }
+.primary { background:var(--blue); color:white; box-shadow:0 5px 13px rgba(36,99,235,.2); }
+.primary span { margin-left:12px; }
+.secondary { background:#f1f5f9; color:#42546a; }
+.result { margin-top:20px; padding:18px; border:1px solid #b9d0ff; border-radius:10px; background:#f5f8ff; line-height:1.6; }
+.result h3 { margin:0 0 5px; color:var(--navy); }
+.result .prediction { color:var(--blue); font-size:20px; font-weight:800; text-transform:capitalize; }
+.result .disclaimer { color:#72551c; font-size:12px; margin-top:10px; }
+.setup-warning { margin:0 0 18px; padding:13px 16px; border:1px solid #f1d89b; background:#fff9e9; border-radius:9px; color:#75551a; font-size:13px; }
+.empty { color:var(--muted); font-size:13px; }
+.footer-note { color:var(--muted); font-size:11px; text-align:center; margin:20px 0; line-height:1.6; }
+@media(max-width:700px) { .container{margin-top:30px}.symptom-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:18px}.top-note{display:none} }
+@media(max-width:430px) { .symptom-grid{grid-template-columns:1fr}.brand small{display:none}.actions{flex-direction:column-reverse}.button{width:100%} }
