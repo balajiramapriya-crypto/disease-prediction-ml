@@ -10,7 +10,7 @@ const API_URL = "https://disease-prediction-api-2026-ajcpgdghb5eda2bp.eastasia-0
 // Load symptoms from JSON file
 async function loadSymptoms() {
     try {
-        const response = await fetch("static/symptoms.json");
+        const response = await fetch("symptoms.json");
 
         if (!response.ok) {
             throw new Error("Could not load symptoms.");
@@ -86,6 +86,7 @@ predictButton.addEventListener("click", async () => {
     resultBox.textContent = "Processing your selected symptoms...";
 
     try {
+        
         const response = await fetch(API_URL, {
             method: "POST",
             headers: {
