@@ -1,87 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Disease Prediction | Academic Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="static/style.css">
+    <title>Disease Prediction | Academic Project</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark">+</span> HealthPredict
-      <small>ACADEMIC DEMO</small>
-    </div>
-    <span class="top-note">Machine Learning Project</span>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="eyebrow">SYMPTOM ANALYSIS PROTOTYPE</div>
-
-      <h1>
-        Understand your symptoms.<br>
-        <span>Explore a prediction.</span>
-      </h1>
-
-      <p>
-        Select the symptoms from the list below. The machine-learning
-        model will return an educational prediction based on its training dataset.
-      </p>
-
-      <div class="notice">
-        <strong>Important:</strong> This tool is for academic demonstration only.
-        It cannot diagnose a disease or replace advice from a qualified
-        healthcare professional.
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-heading">
-        <div>
-          <div class="eyebrow">STEP 1</div>
-          <h2>Select symptoms</h2>
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark">+</span> HealthPredict
+            <small>ACADEMIC DEMO</small>
         </div>
 
-        <span class="count" id="selectedCount">0 selected</span>
-      </div>
+        <span class="top-note">Machine Learning Project</span>
+    </header>
 
-      <div class="search-wrap">
-        <span>⌕</span>
-        <input
-          id="symptomSearch"
-          type="search"
-          placeholder="Search symptoms..."
-          aria-label="Search symptoms"
-        >
-      </div>
+    <main class="container">
 
-      <div class="symptom-grid" id="symptomGrid">
-        <p>Loading symptoms...</p>
-      </div>
+        <section class="hero">
 
-      <div class="actions">
-        <button class="button secondary" id="clearButton" type="button">
-          Clear selection
-        </button>
+            <div class="eyebrow">SYMPTOM ANALYSIS PROTOTYPE</div>
 
-        <button class="button primary" id="predictButton" type="button">
-          Predict <span>→</span>
-        </button>
-      </div>
+            <h1>
+                Understand your symptoms.<br>
+                <span>Explore a prediction.</span>
+            </h1>
 
-      <div id="result" class="result" hidden aria-live="polite"></div>
-    </section>
+            <p>
+                Select the symptoms from the list below.
+                The machine-learning model will return an
+                educational prediction based on its training dataset.
+            </p>
 
-    <p class="footer-note">
-      Predictions depend on the dataset and model quality.
-      Do not use this application to make healthcare decisions.
-    </p>
-  </main>
+            <div class="notice">
+                <strong>Important:</strong>
+                This tool is for academic demonstration only.
+                It cannot diagnose a disease or replace advice from
+                a qualified healthcare professional.
+            </div>
 
-  <script src="static/script.js"></script>
+        </section>
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <div class="eyebrow">STEP 1</div>
+                    <h2>Select symptoms</h2>
+                </div>
+
+                <span class="count" id="selectedCount">
+                    0 selected
+                </span>
+
+            </div>
+
+            <div class="search-wrap">
+
+                <span>⌕</span>
+
+                <input
+                    id="symptomSearch"
+                    type="search"
+                    placeholder="Search symptoms..."
+                    aria-label="Search symptoms"
+                >
+
+            </div>
+
+            <div class="symptom-grid" id="symptomGrid">
+                <p>Loading symptoms...</p>
+            </div>
+
+            <div class="actions">
+
+                <button
+                    class="button secondary"
+                    id="clearButton"
+                    type="button"
+                >
+                    Clear selection
+                </button>
+
+                <button
+                    class="button primary"
+                    id="predictButton"
+                    type="button"
+                >
+                    Predict <span>→</span>
+                </button>
+
+            </div>
+
+            <div
+                id="result"
+                class="result"
+                hidden
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+        <p class="footer-note">
+            Predictions depend on the dataset and model quality.
+            Do not use this application to make healthcare decisions.
+        </p>
+
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
 </body>
 </html>
